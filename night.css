@@ -1,0 +1,166 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(#090c1b, #152580);
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 1;
+}
+
+    .moon{
+        position: absolute;
+        top: 100px;
+        left: 400px;
+        width: 200px;
+        height: 200px;
+
+        background-color: aliceblue;
+        border-radius: 50%;
+
+        transition: 0.5s;
+    }
+    .moon::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+
+        background: linear-gradient(#090c1b, #152580);
+        background-attachment: fixed;
+    }
+
+    .forest{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+
+        transform: scale(1.2);
+    }
+
+    .scene i {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: animate linear infinite;
+    }
+    @keyframes animate {
+        0%
+        {
+            opacity: 0;
+            transform: translateY(0px);
+        }
+
+        10%, 99%{
+            opacity: 1;
+        }
+
+        100%
+        {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+    }
+
+    .cloud1 {
+        position: absolute;
+        max-width: 600px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 50s linear infinite;
+    }
+
+    .cloud2 {
+        position: absolute;
+        max-width: 600px;
+        /* top: 30; */
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 40s linear infinite;
+    }
+   
+    .cloud3 {
+        position: absolute;
+        max-width: 600px;
+        top:10;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 80s linear infinite;
+    }
+    .cloud3_2{
+        position: absolute;
+        max-width: 400px;
+        top:700;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 50s linear infinite;
+
+    }
+    .cloud4 {
+        position: absolute;
+        max-width: 200px;
+        top: 200px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 70s linear infinite;
+        animation-delay: -20s;
+    }
+    .cloud4_2 {
+        position: absolute;
+        max-width: 200px;
+        top: 500px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 50s linear infinite;
+        animation-delay: -10s;
+    }
+    .cloud5 {
+        position: absolute;
+        max-width: 500px;
+        top: 150px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 40s linear infinite;
+        animation-delay: -5s;
+    }
+    .cloud6{
+        position: absolute;
+        max-width: 400px;
+        top: 400px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 45s linear infinite;
+        animation-delay: -5s;
+    }
+    .cloud6_2{
+        position: absolute;
+        max-width: 400px;
+        top: 550px;
+        left: 0;
+        z-index: 10000;
+        animation: animateCloud 60s linear infinite;
+        animation-delay: -10s;
+    }
+
+    @keyframes animateCloud {
+        0%{
+            transform: translateX(-100%) scale(1);
+        }
+        100%{
+            transform: translateX(500%) scale(1.1);
+        }
+
+    }
